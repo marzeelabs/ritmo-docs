@@ -1,0 +1,28 @@
+.buttons-top {
+  max-width: 500px;
+  margin: 0 auto;
+  opacity: 1;
+  position: relative;
+  padding-top: 30px;
+}
+
+.buttons-top__list {
+  margin: 0;
+  padding: 0;
+}
+
+.buttons-top__list__item {
+  background: #ea4d36;
+  border-radius: 50px;
+  width: 40%;
+  display: inline-block;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.buttons-top__list__item a {
+  color: #ffffff;
+  display:block;
+  padding: 10px 5px;
+  width: 100%;
+}

@@ -1,5 +1,5 @@
 // functions
-// @import "functions";
+@import "functions";
 
 // Init file
 @import "init";
@@ -10,15 +10,23 @@
 // Breakpoint media queries
 @import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
-// Compass files
-// Better than Drupal's clearfix.
-@import "../../node_modules/compass-mixins/lib/compass/utilities/general/clearfix";
-// Use one CSS3 mixin instead of multiple vendor prefixes.
-@import "../../node_modules/compass-mixins/lib/compass/css3";
-// Helps set up a vertical rhythm.
-@import "../../node_modules/compass-mixins/lib/compass/typography/vertical_rhythm";
-// Helps with long texts in small spaces.
-@import '../../node_modules/compass-mixins/lib/compass/typography/text/ellipsis';
 
-// Marzee Labs files
+// Ritmo files.
+@import "vendors/ritmo/ritmo";
+
+
+//Mixins
+@import "mixins";
+
+//Normalize
+@import "normalize";
+
+// Base styles
+@import "base";
+
+// Ritmo Labs files
 @import "components/layout";
+@import "components/navigation";
+@import "components/logo";
+@import "components/buttons-top";
+
