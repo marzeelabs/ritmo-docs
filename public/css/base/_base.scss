@@ -1,0 +1,56 @@
+@include ritmo-baseline();
+
+/* Resets and defaults */
+body {
+  color: palette(black);
+  background-color: palette(white);
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  font-weight: 300;
+  @include ritmo-font-size(16px);
+
+  span {
+    font-weight: 700;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+%section-commons {
+  @include container(500px);
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px ritmo(4) 20px;
+  @include ritmo-leading(4.5);
+//-  @include pie-clearfix();
+
+  &:before {
+    content: "";
+    background: palette(grey, light);
+    display: block;
+    height: 1px;
+    width: 90%;
+    margin: 0 auto ritmo(8) auto;
+  }
+}
+
+.ritmo-titles {
+  font-weight: 700;
+  @include ritmo-font-size(24px);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

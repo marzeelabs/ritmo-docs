@@ -1,5 +1,17 @@
 {
   "index": {
-    "title": "MZ Harp’s starter app"
+    "title": "RITMO, a vertical rhythm sass toolkit"
+  },
+  "configvar01": {
+    "title": "$BASE-FONT-SIZE: 16PX",
+    "description":"The default font size for all text in pixels"
+  },
+  "configvar02": {
+    "title": "$RHYTHM-UNIT 'EM'",
+    "description":"The length unit in which to output rhythm values. Supported values: px, em, rem. Percent units can't be used since they make calculating padding and margins impractical, and percentage borders are not valid or supported in css."
+  },
+  "configvar03": {
+    "title": "$BASE-FONT-SIZE: 16PX",
+    "description":"The default font size for all text in pixels"
   }
 }

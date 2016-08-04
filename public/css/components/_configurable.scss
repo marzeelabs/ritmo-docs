@@ -1,0 +1,16 @@
+.configurable {
+  @extend %section-commons;
+}
+
+.configurable__var-title {
+  background: palette(grey, light);
+  padding: ritmo(2) 0;
+  width: auto;
+  display: block;
+  border-radius: ritmo(6);
+  margin-top: ritmo(6);
+  text-transform: uppercase;
+  color: palette(ritmo);
+  @include ritmo-font-size(18px);
+  letter-spacing: 0.1em;
+}

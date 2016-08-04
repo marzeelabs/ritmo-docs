@@ -1,0 +1,49 @@
+.footer{
+    @extend %section-commons;
+}
+
+.demo {
+  @extend %section-commons;
+  margin: ritmo(20) auto 0 auto;
+  @include pie-clearfix();
+
+  &:before {
+    display: none;
+  }
+
+  p {
+    //@include ritmo-leading(4);
+  }
+
+  h2 {
+    @include ritmo-font-size(18px);
+    font-weight: 300;
+    color: palette(grey);
+    display: block;
+    margin-bottom: ritmo(6);
+  }
+}
+.demo-text__content{
+  padding: 0;
+}
+
+.demo-text__wrapper {
+  position: relative;
+  border: thin solid red;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.demo-text__grid {
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(palette(grey) 1px, transparent 1px);
+  background-size: 100% 25px;
+}

@@ -14,15 +14,6 @@ $graceful-usage-threshold: 0.2;
 // Variables
 // =============================================================================
 
-//
-// Font faces, stacks and sizes.
-//
-
-// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
-// rhythm for your entire page. You can see some of its mixins and functions in
-// use in the normalize.scss file.
-// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
-
 $base-font-family: "Roboto", sans-serif;
 $code-font-family: "Roboto", monospace;
 $base-font-size:   16px; // The font size set on the root html element.
@@ -58,13 +49,16 @@ $palettes: (
 
 
 //
-// Breakpoints.
+// Breakpoints
 //
-$break-small: 480px;
-$break-medium-small: 600px;
-$break-medium: 730px;
-$break-large: 980px;
-$break-big: 1200px;
+$mq-breakpoints: (
+  break-extra-small: 400px,
+  break-small: 480px,
+  break-medium-small: 600px,
+  break-medium: 730px,
+  break-large: 980px,
+  break-big: 1200px
+);
 
 
 //

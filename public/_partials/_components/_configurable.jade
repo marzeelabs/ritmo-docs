@@ -1,0 +1,10 @@
+.configurable
+
+  h1.ritmo-titles Configurable variables
+
+  for configvar, slug in public._data
+    if (slug !== 'index')
+
+      h2.configurable__var-title #{configvar.title}
+
+      p #{configvar.description}
