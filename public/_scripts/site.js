@@ -60,6 +60,16 @@ $(function() {
   });
 
 
+  function gridDemo() {
+    //$(".demo-text__grid").hide();
+
+    $("#show_hide_grid").click(function(){
+      $(".demo-text__grid").toggleClass('show-grid hide-grid');
+    });
+  };
+
+
+  gridDemo();
   $(window).on('resize scroll', fixedHeader);
   $( window ).on('hashchange', scrollToSection).trigger('hashchange');
   $("a[href^='/#']").click(triggerHashChange);
