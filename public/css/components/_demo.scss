@@ -1,7 +1,6 @@
 .demo {
   @extend %section-commons;
   margin: ritmo(20) auto 0 auto;
-  @include pie-clearfix();
 
   &:before {
     display: none;
@@ -12,37 +11,35 @@
     font-weight: 300;
     color: palette(grey);
     display: block;
-    margin: ritmo(4) auto ritmo(- 3) auto;
+    margin: ritmo(4) auto ritmo(3) auto;
   }
 }
 .demo-text__content{
-  padding: 0;
 
   p {
     @include ritmo-leading(5);
     font-family: serif;
     font-style: italic;
     @include ritmo-font-size(18px);
+    margin: 0 0 ritmo(5);
   }
 }
 
 .demo-text__wrapper {
   position: relative;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  @include clearfix();
 }
 
 .demo-text__grid {
   height: 100%;
   width: 100%;
   display: block;
-  top: -8px;
+  top: 0;
   left: 0;
   position: absolute;
   z-index: 5;
   background: linear-gradient(palette(ritmo) 1px, transparent 1px);
-  background-size: 100% 25px;
+  background-size: 100% ritmo(5);
   pointer-events: none;
+  transition: opacity ease .2s;
 }
