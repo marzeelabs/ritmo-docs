@@ -1,10 +1,26 @@
-.configurable
+.configurable#configvars
 
   h1.ritmo-titles Configurable variables
 
-  for configvar, slug in public._data
-    if (slug !== 'index')
+  h2.configurable__title $BASE-FONT-SIZE: 16PX
+  p The default font size for all text in pixels
 
-      h2.configurable__var-title #{configvar.title}
+  h2.configurable__title $base-line-height 25px
+  p The distance between text baselines (vertical rhythm) in pixels.
 
-      p #{configvar.description}
+  h2.configurable__title $rhythm-unit "em"
+  p The length unit in which to output rhythm values. Supported values: px, em, rem. Percent units can't be used since they make calculating padding and margins impractical, and percentage borders are not valid or supported in css.
+
+  h2.configurable__title $rem-with-px-fallback true
+  p Whether to output fallback values in px when using rem as the rhythm-unit.
+
+  h2.configurable__title $default-rhythm-border-width 1px
+  p Default values for rhythm borders properties. Supports style alone eg. solid or list of style and color eg. solid #aaa;."
+
+  h2.configurable__title $default-rhythm-border-style solid
+
+  h2.configurable__title $round-to-nearest-half-line false
+  p Allows the adjust-font-size-to mixin and the lines-for-font-size function to round the line height to the nearest half line height instead of the nearest integral line height to avoid large spacing between lines.
+
+  h2.configurable__title $min-line-padding 2px
+  p Ensure there is at least this many pixels of vertical padding above and below the text.

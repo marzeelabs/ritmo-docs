@@ -60,15 +60,41 @@ $(function() {
   });
 
 
+  function supportMenu() {
+
+    $('.support-menu a').on('click', function(event) {
+
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top - 60
+                }, 1000);
+                return false;
+              }
+            }
+    });
+
+    $(window).on('scroll resize', function() {
+        $('.configurable').each(function() {
+            if($(window).scrollTop() >= $(this).offset().top - 65) {
+                var id = $(this).attr('id');
+                $('.support-menu a').removeClass('support-menu--active');
+                $('.support-menu a[href=#'+ id +']').addClass('support-menu--active');
+            }
+        });
+    });
+  };
+
   function gridDemo() {
-    //$(".demo-text__grid").hide();
 
     $("#show_hide_grid").click(function(){
       $(".demo-text__grid").toggleClass('show-grid hide-grid');
     });
   };
 
-
+  supportMenu();
   gridDemo();
   $(window).on('resize scroll', fixedHeader);
   $( window ).on('hashchange', scrollToSection).trigger('hashchange');

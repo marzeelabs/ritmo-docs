@@ -1,0 +1,33 @@
+.support-menu {
+  display:none;
+
+  @include mq($from: break-medium) {
+    position: fixed;
+    width: 60px;
+    display: block;
+    padding: ritmo(2) 10px ritmo(2) 0;
+    text-align: left;
+    text-decoration: none;
+    z-index: 10;
+    top: ritmo(40);
+  }
+
+  @include mq($from: break-medium) {
+    width: 150px;
+  }
+
+  a {
+    display: block;
+    color: palette(black);
+    transition: background ease 0.2s;
+    padding: ritmo() 0 ritmo() 30px;
+    @include ritmo-leading(4);
+    margin-bottom: ritmo(2);
+  }
+}
+
+.support-menu a:hover,
+.support-menu a.support-menu--active {
+  background: palette(ritmo);
+  color: palette(white);
+}
