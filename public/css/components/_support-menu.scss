@@ -25,9 +25,17 @@
 
 .support-menu__item {
   @include ritmo-font-size(12px);
+  display: block;
+  padding: ritmo(3) 10px;
+  color: palette(white);
+
+  &:hover {
+      background: palette(ritmo);
+      color: palette(white);
+  }
 
   @include mq($from: break-medium) {
-    display: block;
+
     color: palette(black);
     font-weight: 400;
     text-transform: uppercase;

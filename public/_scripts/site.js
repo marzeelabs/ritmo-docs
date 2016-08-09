@@ -77,13 +77,24 @@ $(function() {
     });
 
     $(window).on('scroll resize', function() {
-        $('.configurable').each(function() {
-            if($(window).scrollTop() >= $(this).offset().top - 65) {
-                var id = $(this).attr('id');
-                $('.support-menu a').removeClass('is-active');
-                $('.support-menu a[href=#'+ id +']').addClass('is-active');
-            }
-        });
+
+      $('.configurable').each(function() {
+          if($(window).scrollTop() >= $(this).offset().top - 65) {
+              var id = $(this).attr('id');
+              $('.support-menu a').removeClass('is-active');
+              $('.support-menu a[href=#'+ id +']').addClass('is-active');
+          }
+      });
+
+      var showSupportmenuclass = 'is-visible',
+          $supportNav = $(".support-menu");
+
+      if ($(window).scrollTop() > 550) {
+          $supportNav.addClass(showSupportmenuclass);
+      } else {
+        $supportNav.removeClass(showSupportmenuclass);
+      }
+
     });
   };
 
@@ -93,22 +104,6 @@ $(function() {
       $(".demo-text__grid").toggleClass('show-grid hide-grid');
     });
   };
-
-  $(window).scroll(function() {
-
-      var showSupportmenuclass = 'is-visible',
-          $supportNav = $(".support-menu");
-
-      if ($(window).scrollTop() > 550) {
-
-          $supportNav.addClass(showSupportmenuclass);
-
-      } else {
-
-        $supportNav.removeClass(showSupportmenuclass);
-
-      }
-  });
 
   supportMenu();
   gridDemo();
