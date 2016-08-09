@@ -46,7 +46,7 @@ $(function() {
  // Force close mobile navigation when clicking anywhere (except the toggle button itself)
   $( document ).on('mousedown touchstart', function(event) {
 
-    var selectorElement = '.navigation li a',
+    var selectorElement = '.navigation a',
         targetElement = '.navigation__menu__item';
 
     $(selectorElement).on('click touch', function() {
@@ -93,6 +93,22 @@ $(function() {
       $(".demo-text__grid").toggleClass('show-grid hide-grid');
     });
   };
+
+  $(window).scroll(function() {
+
+      var showSupportmenuclass = 'support-menu--show',
+          $supportNav = $(".support-menu");
+
+      if ($(window).scrollTop() > 550) {
+
+          $supportNav.addClass(showSupportmenuclass);
+
+      } else {
+
+        $supportNav.removeClass(showSupportmenuclass);
+
+      }
+  });
 
   supportMenu();
   gridDemo();

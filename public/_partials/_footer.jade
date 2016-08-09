@@ -1,2 +1,13 @@
 footer.footer
   p RITMO #{new Date().getFullYear()}
+
+  ul.footer-menu
+
+    li.footer-menu__item(class="#{ current.path[0] == 'index' ? 'footer-active' : '' }")
+      a(href="/" alt="") Home
+
+    li.footer-menu__item(class="#{ current.path[0] == 'demo' ? 'footer-active' : '' }")
+      a(href="/demo" alt="") Demo
+
+    li.footer-menu__item
+      a(href="https://github.com/marzeelabs/ritmo" alt="" target="blank") Github
