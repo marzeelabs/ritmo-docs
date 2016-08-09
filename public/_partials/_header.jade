@@ -9,12 +9,12 @@ header
       ul.navigation__menu
 
         li.navigation__menu__item(class="#{ current.path[0] == 'index' ? 'is-active' : '' }")
-          a(href="/" alt="") Home
+          a.navigation__menu__link(href="/" alt="") Home
 
         li.navigation__menu__item(class="#{ current.path[0] == 'demo' ? 'is-active' : '' }")
-          a(href="/demo" alt="") Demo
+          a.navigation__menu__link(href="/demo" alt="") Demo
 
         li.navigation__menu__item
-          a(href="https://github.com/marzeelabs/ritmo" alt="" target="blank") Github
+          a.navigation__menu__link(href="https://github.com/marzeelabs/ritmo" alt="" target="blank") Github
 
         include _components/_support-menu

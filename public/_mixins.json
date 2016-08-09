@@ -1,6 +1,0 @@
-{
-"mixin01": {
-    "title": "$BASE-FONT-SIZE: 16PX",
-    "description":"The default font size for all text in pixels"
-  }
-}
