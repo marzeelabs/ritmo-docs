@@ -96,7 +96,7 @@ $(function() {
 
   $(window).scroll(function() {
 
-      var showSupportmenuclass = 'support-menu--show',
+      var showSupportmenuclass = 'is-visible',
           $supportNav = $(".support-menu");
 
       if ($(window).scrollTop() > 550) {

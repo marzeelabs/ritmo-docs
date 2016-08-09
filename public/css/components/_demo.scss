@@ -14,7 +14,8 @@
     margin: ritmo(4) auto ritmo(3) auto;
   }
 }
-.demo-text__content{
+
+.demo-text__content {
 
   p {
     @include ritmo-leading(5);
@@ -22,6 +23,25 @@
     font-style: italic;
     @include ritmo-font-size(18px);
     margin: 0 0 ritmo(5);
+    text-align: left;
+  }
+
+  q {
+    background: palette(grey, dark);
+    color: palette(white);
+    padding: ritmo(5) 25px ritmo(5) 25px;
+    margin: ritmo(5) 25px ritmo(5) 0;
+    width: 200px;
+    float: left;
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+
+  .second-quote {
+    display: block;
+    width: auto;
+    padding: ritmo(5) 10px ritmo(5) 10px;
+    margin: ritmo(5) 0;
   }
 }
 

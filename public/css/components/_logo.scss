@@ -4,6 +4,12 @@
   opacity: 0;
 }
 
+//- Logo fallback image
+
+.logo__fallback {
+  @include element-invisible();
+}
+
 .logo__wrapper {
   width: auto;
   margin: ritmo(22) auto ritmo(4) auto;
@@ -12,7 +18,24 @@
   position: relative;
 }
 
-.logo__content {
+.logo,
+.logo-small {
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+//- Logo in demo page
+
+.logo-small {
+  width: 295px;
+  margin: 0 auto ritmo(6) auto;
+}
+
+//- Logo in homepage
+
+.logo {
   width: 305px;
   height: ritmo(32);
   margin: 0 auto;

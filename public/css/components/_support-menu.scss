@@ -13,6 +13,14 @@
     opacity: 0;
     transition: opacity ease 0.2s;
   }
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  &.is-hidden {
+    display: none;
+  }
 }
 
 .support-menu__item {
@@ -48,12 +56,4 @@
       color: palette(white);
     }
   }
-}
-
-.support-menu--show {
-  opacity: 1;
-}
-
-.support-menu--remove {
-  display: none;
 }

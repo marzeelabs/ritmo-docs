@@ -1,56 +1,5 @@
 {
   "index": {
     "title": "RITMO, a vertical rhythm sass toolkit"
-  },
-
-    "configvars": {
-
-      "configvar01": {
-      "title": "$BASE-FONT-SIZE: 16PX",
-      "description":"The default font size for all text in pixels"
-      },
-
-      "configvar02": {
-      "title": "$base-line-height 25px",
-      "description":"The distance between text baselines (vertical rhythm) in pixels."
-      },
-
-      "configvar03": {
-      "title": "$rhythm-unit 'em'",
-      "description":"The length unit in which to output rhythm values. Supported values: px, em, rem. Percent units can't be used since they make calculating padding and margins impractical, and percentage borders are not valid or supported in css."
-      },
-
-      "configvar04": {
-      "title": "$rem-with-px-fallback true",
-      "description":"Whether to output fallback values in px when using rem as the rhythm-unit."
-      },
-
-      "configvar05": {
-      "title": "$default-rhythm-border-width 1px",
-      "description":"Default values for rhythm borders properties. Supports style alone eg. solid or list of style and color eg. solid #aaa;."
-      },
-
-      "configvar06": {
-      "title": "$default-rhythm-border-style solid"
-      },
-
-      "configvar07": {
-      "title": "$round-to-nearest-half-line false",
-      "description":"Allows the adjust-font-size-to mixin and the lines-for-font-size function to round the line height to the nearest half line height instead of the nearest integral line height to avoid large spacing between lines."
-      },
-
-      "configvar08": {
-      "title": "$min-line-padding 2px",
-      "description":"Ensure there is at least this many pixels of vertical padding above and below the text."
-      }
-    },
-
-    "mixins": {
-
-      "mixin01": {
-      "title": "$BASE-FONT-SIZE: 16PX",
-      "description":"The default font size for all text in pixels"
-    }
-
   }
 }
