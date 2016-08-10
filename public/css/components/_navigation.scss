@@ -64,7 +64,7 @@
   width: 30px;
   height: ritmo()/2;
   background-color: palette(white);
-  transition: rotate ease 1s;
+  transition-duration: 0.5s;
 
   &:before, &:after {
     content: "";
@@ -77,11 +77,11 @@
   }
 
   &:before {
-    top: - ritmo(1.4);
+    top: - ritmo(2);
   }
 
   &:after {
-    bottom: - ritmo(1.4);
+    bottom: - ritmo(2);
   }
 
   .is-open & {
