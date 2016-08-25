@@ -54,7 +54,7 @@
 
   @include mq($from: break-large){
     @include ritmo-font-size(14px);
-    padding: ritmo(2) 15px ritmo(2) 35px;
+    padding: ritmo(2) 25px ritmo(2) 35px;
   }
 
   &.is-active,

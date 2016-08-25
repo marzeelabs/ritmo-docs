@@ -43,7 +43,8 @@ $palettes: (
     base: rgb(255, 255, 255) // #fff palette(white)
   ),
   ritmo: (
-    base: rgb(233, 75, 53) // #e94b34 palette(ritmo)
+    base: rgb(233, 75, 53), // #e94b34 palette(ritmo)
+    dark: darken(#e94b34, 20%)
   )
 );
 

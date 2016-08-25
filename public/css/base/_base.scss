@@ -7,9 +7,11 @@ body {
 }
 
 a {
+  color: palette(ritmo);
   text-decoration: none;
 
   &:hover {
+    color: palette(ritmo, dark);
     text-decoration: none;
   }
 }
