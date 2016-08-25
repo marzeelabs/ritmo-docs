@@ -21,8 +21,6 @@ then
 
   TEMP_DIRECTORY="/tmp/__temp_static_content"
   CURRENT_COMMIT=`git rev-parse HEAD`
-  ORIGIN_URL=`git config --get remote.origin.url`
-  ORIGIN_URL_WITH_CREDENTIALS=${ORIGIN_URL/\/\/github.com/\/\/$GITHUB_TOKEN@github.com}
 
   echo "Compiling new static content"
   mkdir $TEMP_DIRECTORY || exit 1
@@ -46,7 +44,9 @@ then
 
   git add -A . || exit 1
   git commit --allow-empty -m "Regenerated static content for $CURRENT_COMMIT" || exit 1
-  git push --force --quiet "$ORIGIN_URL_WITH_CREDENTIALS" $DEPLOY_TO > /dev/null 2>&1
+  echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  chmod 600 deploy_key
+  ssh-agent bash -c "ssh-add deploy_key; git push --force \"git@github.com:$TRAVIS_REPO_SLUG.git\" $DEPLOY_TO"
 
   echo "Cleaning up temp files"
   rm -Rf $TEMP_DIRECTORY
