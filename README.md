@@ -1,6 +1,6 @@
 # Ritmo Website
 
-![Ritmo - A vertical rhythm sass toolkit](https://ritmo.marzeelabs.org/images/logo-small.jpg "Ritmo")
+![Ritmo - A vertical rhythm sass toolkit](http://ritmo.marzeelabs.org/images/logo-small.jpg "Ritmo")
 
 Find more information on Ritmo [here](https://github.com/marzeelabs/ritmo)
 
