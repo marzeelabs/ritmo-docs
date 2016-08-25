@@ -1,0 +1,192 @@
+[class*="logo__"] {
+  position: absolute;
+  transform-style: preserve-3d;
+  opacity: 0;
+}
+
+//- Logo fallback image
+
+.logo__fallback {
+  @include element-invisible();
+}
+
+.logo__wrapper {
+  width: auto;
+  margin: ritmo(22) auto ritmo(4) auto;
+  opacity: 1;
+  text-align: center;
+  position: relative;
+}
+
+.logo,
+.logo-small {
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+//- Logo in demo page
+
+.logo-small {
+  width: 295px;
+  margin: 0 auto ritmo(6) auto;
+}
+
+//- Logo in homepage
+
+.logo {
+  width: 305px;
+  height: ritmo(32);
+  margin: 0 auto;
+  opacity: 1;
+  position: relative;
+}
+
+.logo__sentence-top {
+  left: 0;
+  width: 305px;
+  height: ritmo(4);
+  top: ritmo(21);
+  transform: translate3d(0, -20px, 0);
+  animation: logoAnimate_phrase_top 0.3s linear 1.3s 1 normal forwards;
+}
+
+.logo__sentence-bottom {
+  width: 214px;
+  height: ritmo(4);
+  left: 51px;
+  top: ritmo(25.2);
+  transform: translate3d(0, -10px, 0);
+  animation: logoAnimate_phrase_bottom 0.3s linear 1.5s 1 normal forwards;
+}
+
+.logo__letter-r {
+  width: 42px;
+  height: ritmo(11.6);
+  left: 29px;
+  top: ritmo(0.8);
+  transform: translate3d(0, -20px, 0);
+  animation: logoAnimate_letter_r 0.3s linear 0s 1 normal forwards;
+}
+
+.logo__letter-i {
+  width: 8px;
+  height: ritmo(11.6);
+  left: 79px;
+  top: ritmo(0.8);
+  transform: translate3d(0, -20px, 0);
+  animation: logoAnimate_letter_i 0.3s linear 0.2s 1 normal forwards;
+}
+
+.logo__letter-t {
+  width: 49px;
+  height: ritmo(11.6);
+  left: 96px;
+  top: ritmo(0.8);
+  transform: translate3d(0, -20px, 0);
+  animation: logoAnimate_letter_t 0.3s linear 0.4s 1 normal forwards;
+}
+
+.logo__letter-m {
+  width: 57px;
+  height: ritmo(11.6);
+  left: 153px;
+  top: ritmo(0.8);
+  transform: translate3d(0, -20px, 0);
+  animation: logoAnimate_letter_m  0.3s linear 0.6s 1 normal forwards;
+}
+
+.logo__letter-o {
+  width: 58px;
+  height: ritmo(11.6);
+  left: 218px;
+  top: ritmo(0.8);
+  transform: translate3d(0, -20px, 0);
+  animation: logoAnimate_letter_o 0.3s linear 0.8s 1 normal forwards;
+}
+
+.logo__base-grid {
+  left: 0;
+  width: 305px;
+  height: ritmo(32);
+  top: 0;
+  opacity: 1;
+}
+
+@keyframes logoAnimate_letter_r {
+  66.67% {
+    transform: translate3d(0, ritmo(0.8), 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoAnimate_letter_i {
+  66.67% {
+    transform: translate3d(0, ritmo(0.8), 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoAnimate_letter_t {
+  66.67% {
+    transform: translate3d(0, ritmo(0.8), 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoAnimate_letter_m {
+  66.67% {
+    transform: translate3d(0, ritmo(0.8), 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoAnimate_letter_o {
+  66.67% {
+    transform: translate3d(0, ritmo(0.8), 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoAnimate_phrase_top {
+  66.67% {
+    transform: translate3d(0, ritmo(0.8), 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, - ritmo(0.8), 0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoAnimate_phrase_bottom {
+  66.67% {
+    transform: translate3d(0, ritmo(2.8), 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, ritmo(1.25), 0);
+    opacity: 1;
+  }
+}

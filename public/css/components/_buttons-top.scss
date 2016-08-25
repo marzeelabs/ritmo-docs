@@ -1,0 +1,48 @@
+.buttons-top {
+  @include container(500px);
+  margin: 0 auto ritmo(10) auto;
+  opacity: 1;
+  position: relative;
+  padding-top: ritmo(6);
+}
+
+.buttons-top__list {
+  margin: 0 auto,;
+  padding: 0;
+}
+
+.buttons-top__list__item {
+  width: 60%;
+  text-align: center;
+  display: block;
+  margin: 0 auto ritmo(4) auto;
+
+  @include mq($from: break-small) {
+    display: inline-block;
+    width: 40%;
+    margin: 0 5% 0 7.5%;
+  }
+
+  &:last-child {
+
+    @include mq($from: break-small) {
+      margin: 0;
+    }
+  }
+}
+
+.buttons-top__list__item a {
+  color: palette(white);
+  display: block;
+  padding: 10px 5px;
+  background: palette(ritmo);
+  border-radius: ritmo(10);
+  text-transform: uppercase;
+  @include ritmo-font-size(14px);
+  letter-spacing: 0.2em;
+  transition: background ease 0.3s;
+
+  &:hover {
+    background: palette(black);
+  }
+}

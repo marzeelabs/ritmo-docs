@@ -1,0 +1,21 @@
+header
+
+  .navigation
+
+      .navigation__mobile-menu__toggle
+
+        span.navigation__mobile-menu__icon
+
+      ul.navigation__menu
+
+        li.navigation__menu__item(class="#{ current.path[0] == 'index' ? 'is-active' : '' }")
+          a.navigation__menu__link(href="/" alt="") Home
+        include _components/_support-menu
+
+        li.navigation__menu__item(class="#{ current.path[0] == 'demo' ? 'is-active' : '' }")
+          a.navigation__menu__link(href="/demo" alt="") Demo
+
+        li.navigation__menu__item
+          a.navigation__menu__link(href="https://github.com/marzeelabs/ritmo" alt="" target="blank") Github
+
+

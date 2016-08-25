@@ -1,0 +1,59 @@
+.demo-switch {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: ritmo(8.5);
+}
+
+.demo-switch input {
+  display:none;
+}
+
+.demo-slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: ritmo(8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: palette(grey, light);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.demo-slider:before {
+  position: absolute;
+  border-radius: 20px;
+  content: "SHOW GRID";
+  padding: 4px 10px 0 10px;
+  height: ritmo(5);
+  width: auto;
+  left: 7px;
+  bottom: 7px;
+  letter-spacing: 0,1em;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .demo-slider {
+  background-color: palette(ritmo);
+}
+
+input:focus + .demo-slider {
+  box-shadow: 0 0 1px palette(ritmo);
+}
+
+input:checked + .demo-slider:before {
+  transform: translateX(42px);
+  content: "HIDE GRID"
+}
+
+.show-grid {
+  opacity: 1;
+}
+
+.hide-grid {
+  opacity: 0;
+}

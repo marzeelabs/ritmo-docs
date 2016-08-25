@@ -1,0 +1,77 @@
+//
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file.
+// This is then called in app.scss and is available for all other files.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+//
+$graceful-usage-threshold: 0.2;
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+$base-font-family: "Roboto", sans-serif;
+$code-font-family: "Roboto", monospace;
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 6px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 45px;
+$h2-font-size: 27px;
+$h3-font-size: 24px;
+$h4-font-size: 21px;
+$h5-font-size: 12px;
+$h6-font-size: 9px;
+
+//
+// Colors, etc.
+//
+
+$palettes: (
+  black: (
+    base: rgb(0, 0, 0) // #000 palette(black)
+  ),
+  grey: (
+    light: rgb(242, 242, 242), // #f2f2f2 palette(grey, light)
+    base: rgb(202, 202, 202), // #cacaca palette(grey)
+    dark: rgb(51, 51, 51) // #333333 palette(grey, dark)
+  ),
+  white: (
+    base: rgb(255, 255, 255) // #fff palette(white)
+  ),
+  ritmo: (
+    base: rgb(233, 75, 53), // #e94b34 palette(ritmo)
+    dark: darken(#e94b34, 20%)
+  )
+);
+
+
+//
+// Breakpoints
+//
+$mq-breakpoints: (
+  break-extra-small: 400px,
+  break-small: 480px,
+  break-medium-small: 600px,
+  break-medium: 730px,
+  break-large: 980px,
+  break-big: 1200px
+);
+
+
+//
+// Grids.
+//
+// We are going to create a 1240px wide, 6 column grid with 20px gutters between
+// columns (applied as 10px of left/right padding on each column).
+$susy: (
+  columns: 6,
+  gutters: 1/6,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  //debug: (image: show)
+);
