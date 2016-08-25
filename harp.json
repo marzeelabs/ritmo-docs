@@ -5,8 +5,9 @@
     "description": "RITMO rules the vertical rhythm of the site based on the initial font size, managing the margins, paddings and line-height, keeping your site organized and structured on a coherent baseline grid.",
     "keywords": "Ritmo, rhythm, mixins, sass, toolkit, vertical rhythm, baseline grid,marzeelabs",
     "siteName": "RITMO SASS Toolkit",
-    "url": "https://github.com/marzeelabs/ritmo.github.io",
+    "url": "https://ritmo.marzeelabs.org",
     "disqus": false,
+    "twitter": "marzeelabs",
     "analytics": false,
     "breakpoints": {
       "small": 460,
