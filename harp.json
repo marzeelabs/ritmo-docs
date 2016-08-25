@@ -1,9 +1,11 @@
 {
   "globals": {
-    "title": "Marzee Labs",
-    "tagline": "Boilerplate for static Harp",
-    "twitter": "marzeelabs",
-    "production_url": "http://marzeelabs.org",
+    "title": "RITMO",
+    "tagline": "A vertical rhythm sass toolkit",
+    "description": "RITMO rules the vertical rhythm of the site based on the initial font size, managing the margins, paddings and line-height, keeping your site organized and structured on a coherent baseline grid.",
+    "keywords": "Ritmo, rhythm, mixins, sass, toolkit, vertical rhythm, baseline grid,marzeelabs",
+    "siteName": "RITMO SASS Toolkit",
+    "url": "https://github.com/marzeelabs/ritmo.github.io",
     "disqus": false,
     "analytics": false,
     "breakpoints": {

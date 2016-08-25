@@ -1,0 +1,31 @@
+.footer {
+  @extend %section-commons;
+
+  &:before {
+    margin: 0 auto ritmo(4) auto;
+  }
+}
+
+.footer-menu {
+  width: 100%;
+  border-top: palette(grey, light) 1px solid;
+}
+
+.footer-menu__item {
+  display: inline-block;
+  margin: ritmo(4) 0 0 0;
+
+  a {
+    display: block;
+    padding: ritmo() 15px;
+    text-transform: uppercase;
+    color: palette(grey, dark);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    @include ritmo-font-size(12px);
+  }
+}
+
+.footer-active a, .footer-menu__item a:hover {
+  color: palette(ritmo);
+}

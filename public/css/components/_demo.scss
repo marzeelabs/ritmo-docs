@@ -1,0 +1,65 @@
+.demo {
+  @extend %section-commons;
+  margin: ritmo(20) auto 0 auto;
+
+  &:before {
+    display: none;
+  }
+
+  h2 {
+    @include ritmo-font-size(14px);
+    font-weight: 300;
+    color: palette(grey);
+    display: block;
+    margin: ritmo(4) auto ritmo(3) auto;
+  }
+}
+
+.demo-text__content {
+
+  p {
+    @include ritmo-leading(5);
+    font-family: serif;
+    font-style: italic;
+    @include ritmo-font-size(18px);
+    margin: 0 0 ritmo(5);
+    text-align: left;
+  }
+
+  q {
+    background: palette(grey, dark);
+    color: palette(white);
+    padding: ritmo(5) 25px ritmo(5) 25px;
+    margin: ritmo(5) 25px ritmo(5) 0;
+    width: 200px;
+    float: left;
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+
+  .second-quote {
+    display: block;
+    width: auto;
+    padding: ritmo(5) 10px ritmo(5) 10px;
+    margin: ritmo(5) 0;
+  }
+}
+
+.demo-text__wrapper {
+  position: relative;
+  @include clearfix();
+}
+
+.demo-text__grid {
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(palette(ritmo) 1px, transparent 1px);
+  background-size: 100% ritmo(5);
+  pointer-events: none;
+  transition: opacity ease .2s;
+}

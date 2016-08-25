@@ -1,24 +1,13 @@
 footer.footer
-  .footer-top(class='#{current.path[0] === "index" ? "footer-top--home" : ""}')
+  p RITMO #{new Date().getFullYear()}
 
-    h1.footer-top__title Feel free to follow us
+  ul.footer-menu
 
-    ul
-      a(href="http://www.twitter.com/marzeelabs", target='_blank')
-        li.footer-top__item
-          span.icon-twitter
+    li.footer-menu__item(class="#{ current.path[0] == 'index' ? 'footer-active' : '' }")
+      a(href="/" alt="") Home
 
-      a(href="http://www.linkedin.com/company/marzee-labs", target='_blank')
-        li.footer-top__item
-          span.icon-linkedin
+    li.footer-menu__item(class="#{ current.path[0] == 'demo' ? 'footer-active' : '' }")
+      a(href="/demo" alt="") Demo
 
-      a(href="http://www.facebook.com/marzeelabs", target='_blank')
-        li.footer-top__item
-          span.icon-facebook
-
-      a(href="http://github.com/marzeelabs", target='_blank')
-        li.footer-top__item
-          span.icon-github
-
-  .footer-bottom
-    p.footer-bottom__info &copy; Marzee Labs 2016
+    li.footer-menu__item
+      a(href="https://github.com/marzeelabs/ritmo" alt="" target="blank") Github
