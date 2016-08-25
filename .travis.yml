@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - 4.4.4
 before_script:
+- openssl aes-256-cbc -K $encrypted_bd1b823d7dbd_key -iv $encrypted_bd1b823d7dbd_iv -in deploy_key.enc -out deploy_key -d
 - chmod +x ./scripts/deploy.sh
 script: gulp build
 after_success: npm run-script deploy
