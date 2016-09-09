@@ -3,52 +3,69 @@
   h1.ritmo-titles Mixins
 
   h2.configurable__title ritmo-baseline
-  p Establishes a font baseline for the given font-size.
+  code ritmo-baseline($font-size: $base-font-size)
+  p Establishes a font baseline for the given font-size. Usefull for initial setting of document font size and also variations on media queries.<br>Uses the <code>$base-font-size</code> variable as a default.
 
   h2.configurable__title ritmo-font-size
-  p Adjust a block to have a different font size and line height to maintain the rhythm. $lines specifies how many multiples of the baseline rhythm each line of this font should use up. It does not have to be an integer, but it defaults to the smallest integer that is large enough to fit the font. Use $from-size to adjust from a font-size other than the base font-size.
+  code ritmo-font-size($to-size, $lines: auto, $from-size: $base-font-size)
+  p Adjust a block to have a different font size and line height to maintain the rhythm. <code>$lines</code> specifies how many multiples of the baseline rhythm each line of this font should use up. It does not have to be an integer, but it defaults to the smallest integer that is large enough to fit the font. Use <code>$from-size</code> to adjust from a font-size other than the base font-size.
 
   h2.configurable__title ritmo-leading
-  p Adjust a block to have different line height to maintain the rhythm. $lines specifies how many multiples of the baseline rhythm each line of this font should use up. It does not have to be an integer, but it defaults to the smallest integer that is large enough to fit the font.
+  code ritmo-leading($lines, $font-size: $base-font-size)
+  p Adjust a block to have different line height to maintain the rhythm. <code>$lines</code> specifies how many multiples of the baseline rhythm each line of this font should use up. It does not have to be an integer, but it defaults to the smallest integer that is large enough to fit the font. Use <code>$font-size</code> to adjust from a font-size other than the base font-size.
+
+  h2.configurable__title ritmo
+  code ritmo($leader: 1, $padding-leader: 0, $padding-trailer: $padding-leader, $trailer: $leader, $font-size: $base-font-size)
+  p Shorthand mixin to apply whitespace for top and bottom margins and padding.
 
   h2.configurable__title ritmo-top
-  p Apply leading whitespace. The $property can be margin or padding.
+  code ritmo-top($lines: 1, $font-size: $base-font-size, $property: margin)
+  p Apply leading whitespace. Defaults to a margin of 1 unit of spacing, using the <code>$base-font-size</code>. The <code>$property</code> can be margin or padding.
 
   h2.configurable__title ritmo-top-padding
+  code ritmo-top-padding($lines: 1, $font-size: $base-font-size)
   p Apply leading whitespace as padding.
 
   h2.configurable__title ritmo-top-margin
+  code ritmo-top-margin($lines: 1, $font-size: $base-font-size)
   p Apply leading whitespace as margin.
 
   h2.configurable__title ritmo-bottom
-  p Apply trailing whitespace. The $property can be margin or padding.
+  code ritmo-bottom($lines: 1, $font-size: $base-font-size, $property: margin)
+  p Apply trailing whitespace. The <code>$property</code> can be margin or padding.
 
   h2.configurable__title ritmo-bottom-padding
+  code ritmo-bottom-padding($lines: 1, $font-size: $base-font-size)
   p Apply trailing whitespace as padding.
 
   h2.configurable__title ritmo-bottom-margin
+  code ritmo-bottom-margin($lines: 1, $font-size: $base-font-size)
   p Apply trailing whitespace as margin.
 
-  h2.configurable__title ritmo
-  p Shorthand mixin to apply whitespace for top and bottom margins and padding.
-
   h2.configurable__title ritmo-margins
+  code ritmo-margins($leader: 1, $trailer: $leader, $font-size: $base-font-size)
   p Shorthand mixin to apply whitespace for top and bottom margins.
 
   h2.configurable__title ritmo-paddings
+  code ritmo-paddings($padding-leader: 1, $padding-trailer: $padding-leader, $font-size: $base-font-size)
   p Shorthand mixin to apply whitespace for top and bottom padding.
 
   h2.configurable__title ritmo-side-border
+  code ritmo-side-border($side, $width: $ritmo-border-width, $lines: 1, $font-size: $base-font-size)
   p Apply a border and whitespace to any side without destroying the vertical rhythm. The whitespace must be greater than the width of the border.
 
   h2.configurable__title ritmo-top-border
-  p Apply a leading border. $border-style and $width are deprecated and will be removed in a future version of Compass.
+  code ritmo-top-border($width: $ritmo-border-width, $lines: 1, $font-size: $base-font-size)
+  p Apply a leading border.
 
   h2.configurable__title ritmo-bottom-border
+  code ritmo-bottom-border($width: $ritmo-border-width, $lines: 1, $font-size: $base-font-size)
   p Apply a trailing border.
 
   h2.configurable__title ritmo-horizontal-borders
+  code ritmo-horizontal-borders($width: $ritmo-border-width, $lines: 1, $font-size: $base-font-size)
   p Apply both leading and trailing borders.
 
   h2.configurable__title ritmo-borders
+  code ritmo-borders($width: $ritmo-border-width, $lines: 1, $font-size: $base-font-size)
   p Apply borders and whitespace equally to all sides.
